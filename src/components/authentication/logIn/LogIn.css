@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Vibur);
+
+@gray70: darken(#ffffff, 70%);
+@gray60: darken(#ffffff, 60%);
+@gray50: darken(#ffffff, 50%);
+@gray30: darken(#ffffff, 30%);
+@gray0: darken(#ffffff, 5%);
+
+
+.loginButton{
+  width: 50%;
+  border-radius: 0%;
+  font-family: "Vibur";
+  width: 100%;
+  height: 40px;
+  border: 1px solid @gray50;
+  border-radius: 30px;
+  background-color: #c5c2c2;
+  font-size: 16px;
+  margin: 15px 0;
+  cursor: pointer;
+  &:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+}
+.padding{
+  padding: 0;
+}
+.text{
+  font-size: 17px;
+  color: #444;
+}
+.text:hover{
+
+  color: #000;
+}
+.cardContainer{
+  padding: 5%;
+  padding-top:1%;
+  padding-bottom: 3%;
+
+}
+h1 {
+      font-family: "Vibur";
+      font-size: 50px;
+      text-align: center;
+      margin: 25px 0;
+      color: #7b7777;
+}
+
+.LoginWithTitle{
+  border-bottom: 2px solid #4e4949de;
+  font-size: 20px;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
