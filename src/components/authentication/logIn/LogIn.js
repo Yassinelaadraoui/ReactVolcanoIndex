@@ -13,8 +13,8 @@ class LogIn extends React.Component {
       email:"",
       password:""
     };
-    this.getEmail = this.getEmail.bind(this);
-    this.getPassword = this.getPassword.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    
   };
 
 
@@ -44,11 +44,9 @@ class LogIn extends React.Component {
     });
 
   }
-  getEmail(event) {
-    this.setState({email: event.target.value});
-  }
-  getPassword(event) {
-    this.setState({password: event.target.value});
+  handleInputChange(event) {
+    this.setState({[event.target.name]: event.target.value});
+    console.log(this.state);
   }
 
   render(){
@@ -62,11 +60,11 @@ class LogIn extends React.Component {
               <form class="col s12">
                 <div class="row ">
                   <div class="input-field col s12 center-align">
-                    <input value={this.state.email} onChange={this.getEmail} id="email" type="email" class="validate" />
+                    <input value={this.state.email} onChange={this.handleInputChange} id="email" name="email" type="email" class="validate" />
                     <label for="email">Email</label>
                   </div>
                   <div class="input-field col s12">
-                    <input value={this.state.password} onChange={this.getPassword} id="password" type="password" class="validate" />
+                    <input value={this.state.password} onChange={this.handleInputChange} id="password" name="password" type="password" class="validate" />
                     <label for="password">Password</label>
                   </div>
                 </div>

@@ -8,6 +8,10 @@ import DataTable from '../DataTable/DataTable';
 import InformationCard from '../informationCard/InformationCard';
 import LogIn from '../authentication/logIn/LogIn';
 import SignUp from '../authentication/SignUp/SignUp';
+import PasswordReset from '../authentication/PasswordReset/PasswordReset';
+import Profile from '../authentication/profile/Profile';
+
+
 
 import firebaseConfig from '../../firebaseConfig';
 
@@ -75,6 +79,8 @@ class App extends React.Component {
         render() {
             return (
               <>
+                <Profile />
+                <PasswordReset />
                 <SignUp />
                 <LogIn />
                 { this.state.showTable ? <DataTable setParentState={this.getClickedElement} />  : null }
